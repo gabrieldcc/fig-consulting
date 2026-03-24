@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  --background: #f4f7fb;
+  --surface: #ffffff;
+  --surface-strong: #0b2142;
+  --text: #41516b;
+  --text-soft: #607089;
+  --brand: #173e78;
+  --brand-strong: #0b1831;
+  --accent: #f4a649;
+  --accent-strong: #ffd08a;
+  --accent-soft: #ffdba8;
+  --white: #ffffff;
+  --font-body: 'Manrope', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text);
+  background: var(--background);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+}
+
+body,
+button,
+input,
+textarea {
+  font: 16px/1.65 var(--font-body);
+}
+
+a,
+button {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  overflow: clip;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--surface-strong);
+  font-family: var(--font-heading);
+  line-height: 1.08;
+}
+
+h1 {
+  font-size: clamp(2.9rem, 7vw, 5rem);
+  letter-spacing: -0.05em;
+  color: var(--white);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: 1.28rem;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 620ms ease,
+    transform 620ms ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
