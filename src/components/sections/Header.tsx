@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import logo from '../../assets/figdata-logo-transparent-light.png'
 import { type NavigationItem } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
 
@@ -25,8 +26,16 @@ export function Header({ navigation }: HeaderProps) {
       className={`${styles.header} ${isScrolled ? styles.headerScrolled : ''}`}
     >
       <div className={styles.container}>
-        <a className={styles.logo} href="#inicio" aria-label="FIgConsulting">
-          FIgConsulting
+        <a
+          className={styles.logo}
+          href="#inicio"
+          aria-label="FigData Consulting"
+        >
+          <img
+            className={styles.logoImage}
+            src={logo}
+            alt="FigData Consulting"
+          />
         </a>
 
         <button

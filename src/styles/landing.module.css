@@ -30,12 +30,20 @@
 }
 
 .logo {
-  color: var(--white);
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  max-width: min(44vw, 250px);
   text-decoration: none;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header .logo {
+  max-width: min(21vw, 132px);
 }
 
 .nav {
@@ -772,6 +780,10 @@
     position: relative;
   }
 
+  .header .logo {
+    max-width: min(38vw, 160px);
+  }
+
   .mobileMenuButton {
     display: inline-flex;
     align-items: center;
@@ -810,6 +822,10 @@
 @media (max-width: 720px) {
   .container {
     width: min(100% - 24px, 1180px);
+  }
+
+  .header .logo {
+    max-width: min(36vw, 118px);
   }
 
   .heroSection,

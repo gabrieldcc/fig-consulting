@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, MessageCircleMore } from 'lucide-react'
+import logo from '../../assets/figdata-logo-transparent-light.png'
 import { siteContent, type NavigationItem } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
 
@@ -13,7 +14,11 @@ export function Footer({ navigation }: FooterProps) {
         <div className={styles.footerGrid}>
           <div>
             <a className={styles.logo} href="#inicio">
-              FIgConsulting
+              <img
+                className={styles.logoImage}
+                src={logo}
+                alt="FigData Consulting"
+              />
             </a>
             <p className={styles.footerText}>
               Consultoria em dados, analytics, BI e inteligência de negócio para
