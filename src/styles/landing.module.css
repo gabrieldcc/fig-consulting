@@ -725,9 +725,17 @@
 }
 
 .footerLinks a {
+  display: inline-flex;
+  align-items: center;
   gap: 10px;
   color: rgba(235, 240, 248, 0.76);
   text-decoration: none;
+}
+
+.footerIcon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
 }
 
 .footerLinks a:hover {
@@ -748,6 +756,12 @@
   background: linear-gradient(135deg, #20c45a, #0fa14c);
   color: var(--white);
   box-shadow: 0 20px 40px rgba(11, 161, 76, 0.28);
+}
+
+.whatsButtonIcon {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 @media (max-width: 1080px) {

@@ -1,5 +1,6 @@
-import { ArrowUpRight, Mail, MessageCircleMore } from 'lucide-react'
+import { ArrowUpRight, Mail } from 'lucide-react'
 import logo from '../../assets/figdata-logo-transparent-light.png'
+import whatsappLogo from '../../assets/whatsapp-logo.png'
 import { siteContent, type NavigationItem } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
 
@@ -45,7 +46,11 @@ export function Footer({ navigation }: FooterProps) {
                 {siteContent.footerLinks.email}
               </a>
               <a href="https://wa.me/5511971234401" target="_blank" rel="noreferrer">
-                <MessageCircleMore size={16} />
+                <img
+                  className={styles.footerIcon}
+                  src={whatsappLogo}
+                  alt="WhatsApp"
+                />
                 {siteContent.footerLinks.whatsapp}
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer">
