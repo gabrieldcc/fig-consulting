@@ -7,12 +7,12 @@ export function WhyChooseSection() {
       <div className={styles.container}>
         <div className={styles.whyLayout}>
           <div className={styles.whyIntro} data-reveal>
-            <span className={styles.sectionEyebrow}>Por que escolher a FIgConsulting</span>
-            <h2>Autoridade consultiva com execução prática e leitura estratégica</h2>
+            <span className={styles.sectionEyebrow}>Por que escolher a FigData</span>
+            <h2>Entregamos dados e visuais que vão gerar valor e revolucionar seu negócio.</h2>
             <p>
-              Nosso trabalho combina método, profundidade técnica e linguagem de
-              negócio para que a liderança tenha dados confiáveis, decisões
-              defensáveis e entregas que realmente entram em operação.
+              Somos uma consultoria especializada em dashboards automatizados em
+              tempo real e Inteligência Artificial, facilitando a tomada de
+              decisão e a execução por todo o time.
             </p>
 
             <div className={styles.authorityCards}>

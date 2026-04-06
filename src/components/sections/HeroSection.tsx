@@ -1,6 +1,37 @@
 import { ArrowRight, BarChart3, CheckCircle2, Play, ShieldCheck } from 'lucide-react'
+import copilotLogo from '../../assets/Copilot-Logo.png'
+import fabricLogo from '../../assets/fabric-logo.png'
+import powerBiLogo from '../../assets/Power-BI-Logo.png'
 import { siteContent } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
+
+function BadgeLogo({ logo }: { logo: string }) {
+  if (logo === 'powerbi') {
+    return (
+      <span className={styles.badgeLogo} aria-hidden="true">
+        <img className={styles.badgeLogoImage} src={powerBiLogo} alt="" />
+      </span>
+    )
+  }
+
+  if (logo === 'fabric') {
+    return (
+      <span className={styles.badgeLogo} aria-hidden="true">
+        <img className={styles.badgeLogoImage} src={fabricLogo} alt="" />
+      </span>
+    )
+  }
+
+  if (logo === 'copilot') {
+    return (
+      <span className={styles.badgeLogo} aria-hidden="true">
+        <img className={styles.badgeLogoImage} src={copilotLogo} alt="" />
+      </span>
+    )
+  }
+
+  return null
+}
 
 export function HeroSection() {
   return (
@@ -10,14 +41,14 @@ export function HeroSection() {
           <div className={styles.heroContent} data-reveal>
             <div className={styles.kicker}>
               <ShieldCheck size={16} />
-              <span>Consultoria premium em dados, BI e inteligência de negócio</span>
+              <span>Consultoria premium em análise de dados, IA e Inteligência de Negócio</span>
             </div>
             <h1>
-              Dados bem estruturados para decisões mais rápidas, seguras e
-              lucrativas.
+              Chega de achismo, aumente seu faturamento analisando dados
+              confiáveis e estratégicos.
             </h1>
             <p className={styles.heroLead}>
-              A FIgConsulting transforma dados dispersos em visibilidade
+              A FigData transforma dados dispersos em visibilidade
               gerencial, prioridades claras e evolução real de performance.
             </p>
 
@@ -35,6 +66,9 @@ export function HeroSection() {
             <div className={styles.badgeList} aria-label="Especialidades">
               {siteContent.badges.map((badge) => (
                 <span key={badge.label} className={styles.badge}>
+                  {badge.logo ? (
+                    <BadgeLogo logo={badge.logo} />
+                  ) : null}
                   {badge.label}
                 </span>
               ))}
@@ -67,11 +101,11 @@ export function HeroSection() {
                 </div>
                 <div className={styles.statRow}>
                   <div>
-                    <strong>+35%</strong>
-                    <span>visibilidade gerencial</span>
+                    <strong>+55</strong>
+                    <span>dashboards entregues</span>
                   </div>
                   <div>
-                    <strong>95%</strong>
+                    <strong>98%</strong>
                     <span>satisfação consultiva</span>
                   </div>
                 </div>
@@ -79,7 +113,7 @@ export function HeroSection() {
 
               <div className={styles.floatingInsight}>
                 <strong>Selo FIg</strong>
-                <span>Consultoria orientada por dados</span>
+                <span>Consultoria orientada por dados e IA</span>
               </div>
 
               <div className={styles.miniPanel}>

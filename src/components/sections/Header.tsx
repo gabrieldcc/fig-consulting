@@ -29,12 +29,12 @@ export function Header({ navigation }: HeaderProps) {
         <a
           className={styles.logo}
           href="#inicio"
-          aria-label="FigData Consulting"
+          aria-label="FigData"
         >
           <img
             className={styles.logoImage}
             src={logo}
-            alt="FigData Consulting"
+            alt="FigData"
           />
         </a>
 

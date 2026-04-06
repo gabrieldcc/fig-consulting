@@ -18,7 +18,7 @@ export function Footer({ navigation }: FooterProps) {
               <img
                 className={styles.logoImage}
                 src={logo}
-                alt="FigData Consulting"
+                alt="FigData"
               />
             </a>
             <p className={styles.footerText}>

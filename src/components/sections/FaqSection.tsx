@@ -7,7 +7,7 @@ export function FaqSection() {
       <div className={styles.container}>
         <div className={styles.sectionHeader} data-reveal>
           <span className={styles.sectionEyebrow}>FAQ</span>
-          <h2>Perguntas frequentes sobre a atuação da FIgConsulting</h2>
+          <h2>Perguntas frequentes sobre a atuação da FigData</h2>
           <p>
             Reunimos respostas objetivas para acelerar sua avaliação sobre o
             escopo, a dinâmica do diagnóstico e os formatos de projeto.

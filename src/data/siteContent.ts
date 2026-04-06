@@ -24,6 +24,7 @@ export type NavigationItem = {
 
 export type BadgeItem = {
   label: string
+  logo?: string
 }
 
 export type BenefitItem = {
@@ -44,13 +45,16 @@ export type DifferentiatorItem = {
 }
 
 export type MethodologyStep = {
+  emoji: string
   title: string
   description: string
 }
 
 export type MetricItem = {
+  emoji: string
   value: string
   label: string
+  description: string
 }
 
 export type TestimonialItem = {
@@ -79,28 +83,30 @@ export const siteContent = {
     { label: 'Business Intelligence' },
     { label: 'Data Analytics' },
     { label: 'Dashboards' },
-    { label: 'Estratégia orientada por dados' },
+    { label: 'Power BI', logo: 'powerbi' },
+    { label: 'Fabric', logo: 'fabric' },
+    { label: 'Copilot', logo: 'copilot' },
   ] satisfies BadgeItem[],
   benefits: [
     {
       title: 'Clareza para decidir',
       description:
-        'Consolidamos indicadores dispersos em uma leitura executiva simples, acionável e confiável.',
-    },
-    {
-      title: 'Redução de ineficiências',
-      description:
-        'Eliminamos retrabalho analítico e diminuímos o tempo gasto com planilhas e relatórios manuais.',
+        'Conectamos indicadores dispersos em uma leitura executiva simples e confiável para tomada de decisão.',
     },
     {
       title: 'Identificação de oportunidades',
       description:
-        'Encontramos padrões de receita, margem e comportamento para revelar novas alavancas de crescimento.',
+        'Encontramos padrões de receita, margem e comportamento de vendas pra alavancar o crescimento do negócio.',
     },
     {
-      title: 'Visão estratégica do negócio',
+      title: 'Visão Estratégica do negócio',
       description:
-        'Traduzimos dados em prioridades gerenciais para acelerar decisões com menos ruído e mais contexto.',
+        'Traduzimos números desconexos em leitura gerencial para acelerar decisões com prioridade.',
+    },
+    {
+      title: 'Redução de ineficiência',
+      description:
+        'Eliminamos retrabalho analítico e diminuímos o tempo gasto com planilhas e relatórios manuais.',
     },
   ] satisfies BenefitItem[],
   services: [
@@ -109,12 +115,6 @@ export const siteContent = {
       title: 'Diagnóstico de dados',
       description:
         'Mapeamento de fontes, gargalos e maturidade analítica para definir os próximos passos com segurança.',
-    },
-    {
-      icon: LayoutDashboard,
-      title: 'Dashboards e BI',
-      description:
-        'Painéis executivos e operacionais com leitura intuitiva, foco em decisão e acompanhamento contínuo.',
     },
     {
       icon: CircleGauge,
@@ -135,10 +135,16 @@ export const siteContent = {
         'Leitura analítica de vendas, operações, marketing e finanças para orientar ajustes de rota.',
     },
     {
+      icon: LayoutDashboard,
+      title: 'Dashboards e BI',
+      description:
+        'Painéis executivos e operacionais com leitura intuitiva, foco em decisão e acompanhamento contínuo.',
+    },
+    {
       icon: DatabaseZap,
       title: 'Cultura data-driven',
       description:
-        'Estruturação de rituais, governança e comunicação para tornar os dados parte do dia a dia da gestão.',
+        'Estruturação de rituais, governança, comunicação e treinamento para todo o time tornar os dados parte do dia a dia da gestão.',
     },
   ] satisfies ServiceItem[],
   differentiators: [
@@ -181,36 +187,60 @@ export const siteContent = {
   ] satisfies DifferentiatorItem[],
   methodology: [
     {
+      emoji: '🔎',
       title: 'Diagnóstico',
       description:
         'Levantamos objetivos, indicadores, bases e principais dores para priorizar o que mais gera impacto.',
     },
     {
+      emoji: '🧩',
       title: 'Estruturação',
       description:
         'Organizamos fontes, regras de negócio, KPIs e arquitetura analítica em um desenho claro e sustentável.',
     },
     {
+      emoji: '⚙️',
       title: 'Implementação',
       description:
         'Construímos dashboards, automações e análises com foco em adoção rápida e valor percebido.',
     },
     {
+      emoji: '🎓',
       title: 'Acompanhamento',
       description:
-        'Monitoramos resultados, refinamos indicadores e apoiamos a evolução da maturidade orientada por dados.',
+        'Monitoramos resultados, refinamos indicadores e aplicamos treinamento ao time após a entrega para sustentar a evolução da maturidade orientada por dados.',
     },
   ] satisfies MethodologyStep[],
   metrics: [
-    { value: '+120', label: 'projetos orientados por dados' },
-    { value: '+35%', label: 'ganho médio em visibilidade gerencial' },
-    { value: '+50', label: 'dashboards entregues' },
-    { value: '95%', label: 'satisfação em projetos consultivos' },
+    {
+      emoji: '📊',
+      value: '+9',
+      label: 'anos de experiência em dados',
+      description: 'Histórico construindo leitura executiva e inteligência aplicada ao negócio.',
+    },
+    {
+      emoji: '🌍',
+      value: '+70',
+      label: 'executivos de empresas globais consumindo dados',
+      description: 'Entregas desenhadas para rotinas de gestão que exigem clareza e velocidade.',
+    },
+    {
+      emoji: '📈',
+      value: '+55',
+      label: 'dashboards entregues',
+      description: 'Painéis executivos e operacionais conectados aos indicadores que importam.',
+    },
+    {
+      emoji: '⭐',
+      value: '98%',
+      label: 'satisfação em projetos consultivos',
+      description: 'Relações de parceria sustentadas por entrega prática, próxima e confiável.',
+    },
   ] satisfies MetricItem[],
   testimonials: [
     {
       quote:
-        'A FIgConsulting transformou um cenário fragmentado em uma leitura executiva clara. Hoje conseguimos reagir mais rápido e decidir com muito mais segurança.',
+        'A FigData transformou um cenário fragmentado em uma leitura executiva clara. Hoje conseguimos reagir mais rápido e decidir com muito mais segurança.',
       name: 'Mariana Teles',
       role: 'Diretora de Operações',
       company: 'Nexa Varejo',
@@ -232,19 +262,19 @@ export const siteContent = {
   ] satisfies TestimonialItem[],
   faqs: [
     {
-      question: 'O que faz uma consultoria de analytics?',
+      question: 'O que faz a FigData Consulting?',
       answer:
         'Ela organiza dados, estrutura indicadores, cria análises e transforma informação em decisões mais rápidas, precisas e alinhadas ao negócio.',
     },
     {
-      question: 'A FIgConsulting atende empresas de quais portes?',
+      question: 'A FigData atende empresas de quais portes?',
       answer:
-        'Atendemos desde operações em fase de estruturação analítica até empresas que já possuem equipes internas e querem acelerar maturidade e execução.',
+        'Atendemos desde empresas pequenas, com pouca estrutura de dados até empresas que já possuem equipes internas e querem acelerar a maturidade dos dados e execução.',
     },
     {
       question: 'Vocês implementam dashboards?',
       answer:
-        'Sim. Desenvolvemos dashboards executivos e operacionais, além de apoiar definição de métricas, arquitetura e adoção pela gestão.',
+        "Sim. Desenvolvemos Dashboards executivos e operacionais utilizando Power BI. Além de apoiar na definição dos KPI's, execução e adoção por todo o time.",
     },
     {
       question: 'Como funciona o diagnóstico inicial?',
@@ -254,12 +284,17 @@ export const siteContent = {
     {
       question: 'Quanto tempo leva um projeto?',
       answer:
-        'O prazo varia conforme escopo, volume de dados e complexidade da operação. Projetos mais enxutos podem gerar entregas iniciais em poucas semanas.',
+        'O prazo varia conforme a necessidade da sua empresa. Os projetos são personalizados e exclusivos pra atender o seu negócio. Temos projetos entregues em poucos dias, outros que levam um tempo maior.',
     },
     {
       question: 'É possível contratar por escopo?',
       answer:
-        'Sim. Podemos atuar em frentes específicas, como diagnóstico, construção de dashboards, automação ou acompanhamento contínuo.',
+        'Podemos atuar em frentes específicas, como diagnóstico, construção de dashboards, automação ou acompanhamento contínuo. Não é necessário a contratação para o ciclo completo.',
+    },
+    {
+      question: 'Vocês trabalham com Inteligência Artificial?',
+      answer:
+        'Sim, utilizamos Copilot integrado com o Power BI. Sendo possível criar um app exclusivo de visualização para sua empresa com acesso em tempo real no seu celular. Com disparos automáticos e com insights.',
     },
   ] satisfies FaqItem[],
   footerLinks: {
@@ -281,15 +316,15 @@ export const siteContent = {
     },
     {
       icon: Sparkles,
-      title: 'Soluções sob medida',
+      title: 'Dados e visuais que geram valor',
       description:
-        'Projetos desenhados para a realidade da empresa, com profundidade analítica e aplicação prática.',
+        'Entregas pensadas para transformar informação em clareza, ação e vantagem competitiva.',
     },
     {
       icon: ChartColumnIncreasing,
-      title: 'Foco em conversão e gestão',
+      title: 'Execução orientada por impacto',
       description:
-        'Estrutura comercial pensada para fortalecer decisão, visibilidade e geração de valor no negócio.',
+        'Dashboards, análises e automações conectados à rotina do time para acelerar resultados.',
     },
   ],
 }

@@ -139,6 +139,16 @@
   text-transform: uppercase;
 }
 
+.valueSection .sectionEyebrow,
+.whySection .sectionEyebrow,
+.methodSection .sectionEyebrow,
+.faqSection .sectionEyebrow,
+.contactSection .sectionEyebrow {
+  border-color: rgba(23, 62, 120, 0.14);
+  background: rgba(23, 62, 120, 0.06);
+  color: var(--brand);
+}
+
 .heroContent h1 {
   max-width: 12ch;
   margin: 22px 0 18px;
@@ -206,12 +216,39 @@
 }
 
 .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 0.72rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.06);
   color: rgba(244, 248, 255, 0.92);
   font-weight: 600;
+}
+
+.badgeLogo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 18px rgba(6, 13, 24, 0.24);
+}
+
+.badgeLogo i {
+  position: absolute;
+  display: block;
+}
+
+.badgeLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .heroVisualWrap {
@@ -564,6 +601,16 @@
   background: rgba(244, 166, 73, 0.14);
   color: var(--accent);
   font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.timelineStepNumber {
+  display: inline-block;
+  margin-top: 16px;
+  color: rgba(244, 248, 255, 0.52);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
 .timelineCard h3 {
@@ -582,16 +629,34 @@
   text-align: center;
 }
 
+.metricEmoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.4rem;
+}
+
 .metricCard strong {
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 2.9rem);
 }
 
-.metricCard span {
+.metricLabel {
   display: block;
   margin-top: 10px;
   color: rgba(235, 240, 248, 0.76);
+}
+
+.metricCard p {
+  margin: 14px 0 0;
+  color: rgba(235, 240, 248, 0.7);
+  line-height: 1.6;
 }
 
 .testimonialCard {

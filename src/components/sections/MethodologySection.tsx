@@ -18,6 +18,9 @@ export function MethodologySection() {
           {siteContent.methodology.map((step, index) => (
             <article key={step.title} className={styles.timelineCard} data-reveal>
               <span className={styles.timelineIndex}>
+                <span aria-hidden="true">{step.emoji}</span>
+              </span>
+              <span className={styles.timelineStepNumber}>
                 {String(index + 1).padStart(2, '0')}
               </span>
               <h3>{step.title}</h3>

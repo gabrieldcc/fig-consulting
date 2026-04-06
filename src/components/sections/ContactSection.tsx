@@ -10,7 +10,7 @@ export function ContactSection() {
             <span className={styles.sectionEyebrow}>Próximo passo</span>
             <h2>Solicite um diagnóstico estratégico</h2>
             <p>
-              Converse com a FIgConsulting para entender prioridades analíticas,
+              Converse com a FigData para entender prioridades analíticas,
               oportunidades de ganho e o melhor formato para iniciar seu projeto.
             </p>
 
