@@ -2,18 +2,14 @@ import type { LucideIcon } from 'lucide-react'
 import {
   Bot,
   BriefcaseBusiness,
-  ChartColumnIncreasing,
   CircleGauge,
   DatabaseZap,
   Gauge,
   Layers3,
   LayoutDashboard,
-  MessageSquareMore,
-  Radar,
   SearchCheck,
   ShieldCheck,
   Sparkles,
-  Target,
   TrendingUp,
 } from 'lucide-react'
 
@@ -45,13 +41,13 @@ export type DifferentiatorItem = {
 }
 
 export type MethodologyStep = {
-  emoji: string
+  icon: LucideIcon
   title: string
   description: string
 }
 
 export type MetricItem = {
-  emoji: string
+  icon: LucideIcon
   value: string
   label: string
   description: string
@@ -149,34 +145,22 @@ export const siteContent = {
   ] satisfies ServiceItem[],
   differentiators: [
     {
-      icon: Target,
-      title: 'Abordagem personalizada',
-      description:
-        'Cada projeto nasce do contexto do cliente, sem pacote genérico nem recomendação desconectada da operação.',
-    },
-    {
       icon: BriefcaseBusiness,
       title: 'Foco em resultado de negócio',
       description:
         'A tecnologia é meio. O objetivo é melhorar margem, produtividade, previsibilidade e velocidade decisória.',
     },
     {
-      icon: Radar,
-      title: 'Visão analítica e estratégica',
+      icon: Bot,
+      title: 'Tecnologia e Inteligência Artificial',
       description:
-        'Combinamos profundidade técnica com leitura executiva para transformar dado em direcionamento claro.',
+        'Aplicamos tecnologia, automação e IA para acelerar análises, gerar insights e apoiar decisões com mais velocidade.',
     },
     {
       icon: Layers3,
       title: 'Implantação prática',
       description:
         'Desenhamos soluções que cabem na rotina da equipe e funcionam além da apresentação final.',
-    },
-    {
-      icon: MessageSquareMore,
-      title: 'Comunicação com gestores',
-      description:
-        'Priorizamos uma narrativa simples, objetiva e útil para acelerar alinhamento entre liderança e operação.',
     },
     {
       icon: ShieldCheck,
@@ -187,25 +171,25 @@ export const siteContent = {
   ] satisfies DifferentiatorItem[],
   methodology: [
     {
-      emoji: '🔎',
+      icon: SearchCheck,
       title: 'Diagnóstico',
       description:
         'Levantamos objetivos, indicadores, bases e principais dores para priorizar o que mais gera impacto.',
     },
     {
-      emoji: '🧩',
+      icon: Layers3,
       title: 'Estruturação',
       description:
         'Organizamos fontes, regras de negócio, KPIs e arquitetura analítica em um desenho claro e sustentável.',
     },
     {
-      emoji: '⚙️',
+      icon: Bot,
       title: 'Implementação',
       description:
         'Construímos dashboards, automações e análises com foco em adoção rápida e valor percebido.',
     },
     {
-      emoji: '🎓',
+      icon: TrendingUp,
       title: 'Acompanhamento',
       description:
         'Monitoramos resultados, refinamos indicadores e aplicamos treinamento ao time após a entrega para sustentar a evolução da maturidade orientada por dados.',
@@ -213,25 +197,25 @@ export const siteContent = {
   ] satisfies MethodologyStep[],
   metrics: [
     {
-      emoji: '📊',
+      icon: Gauge,
       value: '+9',
       label: 'anos de experiência em dados',
       description: 'Histórico construindo leitura executiva e inteligência aplicada ao negócio.',
     },
     {
-      emoji: '🌍',
+      icon: Sparkles,
       value: '+70',
       label: 'executivos de empresas globais consumindo dados',
       description: 'Entregas desenhadas para rotinas de gestão que exigem clareza e velocidade.',
     },
     {
-      emoji: '📈',
+      icon: LayoutDashboard,
       value: '+55',
       label: 'dashboards entregues',
       description: 'Painéis executivos e operacionais conectados aos indicadores que importam.',
     },
     {
-      emoji: '⭐',
+      icon: ShieldCheck,
       value: '98%',
       label: 'satisfação em projetos consultivos',
       description: 'Relações de parceria sustentadas por entrega prática, próxima e confiável.',
@@ -300,7 +284,7 @@ export const siteContent = {
   footerLinks: {
     email: 'contato@figconsulting.com.br',
     whatsapp: '+55 (11) 97123-4401',
-    linkedin: 'linkedin.com/company/figconsulting',
+    instagram: 'instagram.com/figdata',
   },
   heroHighlights: [
     'Diagnóstico preciso da operação',
@@ -319,12 +303,6 @@ export const siteContent = {
       title: 'Dados e visuais que geram valor',
       description:
         'Entregas pensadas para transformar informação em clareza, ação e vantagem competitiva.',
-    },
-    {
-      icon: ChartColumnIncreasing,
-      title: 'Execução orientada por impacto',
-      description:
-        'Dashboards, análises e automações conectados à rotina do time para acelerar resultados.',
     },
   ],
 }

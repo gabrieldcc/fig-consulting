@@ -9,11 +9,6 @@ export function WhyChooseSection() {
           <div className={styles.whyIntro} data-reveal>
             <span className={styles.sectionEyebrow}>Por que escolher a FigData</span>
             <h2>Entregamos dados e visuais que vão gerar valor e revolucionar seu negócio.</h2>
-            <p>
-              Somos uma consultoria especializada em dashboards automatizados em
-              tempo real e Inteligência Artificial, facilitando a tomada de
-              decisão e a execução por todo o time.
-            </p>
 
             <div className={styles.authorityCards}>
               {siteContent.authority.map((item) => {

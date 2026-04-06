@@ -1,9 +1,13 @@
+import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, BarChart3, CheckCircle2, Play, ShieldCheck } from 'lucide-react'
 import copilotLogo from '../../assets/Copilot-Logo.png'
 import fabricLogo from '../../assets/fabric-logo.png'
 import powerBiLogo from '../../assets/Power-BI-Logo.png'
 import { siteContent } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
+
+const whatsappUrl =
+  'https://wa.me/5511943039815?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira.'
 
 function BadgeLogo({ logo }: { logo: string }) {
   if (logo === 'powerbi') {
@@ -34,6 +38,26 @@ function BadgeLogo({ logo }: { logo: string }) {
 }
 
 export function HeroSection() {
+  const chartRef = useRef<HTMLDivElement>(null)
+  const [isChartVisible, setIsChartVisible] = useState(false)
+
+  useEffect(() => {
+    const chartElement = chartRef.current
+
+    if (!chartElement) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsChartVisible(entry.isIntersecting)
+      },
+      { threshold: 0.45 },
+    )
+
+    observer.observe(chartElement)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="inicio" className={styles.heroSection}>
       <div className={styles.container}>
@@ -53,11 +77,11 @@ export function HeroSection() {
             </p>
 
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#contato">
+              <a className={styles.primaryButton} href={whatsappUrl} target="_blank" rel="noreferrer">
                 Falar com um especialista
                 <ArrowRight size={18} />
               </a>
-              <a className={styles.secondaryButton} href="#servicos">
+              <a className={styles.secondaryButton} href={whatsappUrl} target="_blank" rel="noreferrer">
                 <Play size={16} />
                 Ver soluções
               </a>
@@ -77,13 +101,15 @@ export function HeroSection() {
 
           <div className={styles.heroVisualWrap} data-reveal>
             <div className={styles.heroVisual}>
-              <div className={styles.dashboardCard}>
+              <div ref={chartRef} className={styles.dashboardCard}>
                 <div className={styles.dashboardHeader}>
                   <span>Visão executiva</span>
                   <BarChart3 size={18} />
                 </div>
                 <div className={styles.chartArea}>
-                  <div className={styles.chartBars}>
+                  <div
+                    className={`${styles.chartBars} ${isChartVisible ? styles.chartBarsAnimated : ''}`}
+                  >
                     <span style={{ height: '34%' }} />
                     <span style={{ height: '54%' }} />
                     <span style={{ height: '68%' }} />

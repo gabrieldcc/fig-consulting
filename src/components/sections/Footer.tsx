@@ -1,5 +1,6 @@
-import { ArrowUpRight, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import logo from '../../assets/figdata-logo-transparent-light.png'
+import instagramLogo from '../../assets/instagram-logo.png'
 import whatsappLogo from '../../assets/whatsapp-logo.png'
 import { siteContent, type NavigationItem } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
@@ -42,7 +43,7 @@ export function Footer({ navigation }: FooterProps) {
             <h3>Contato</h3>
             <div className={styles.footerLinks}>
               <a href={`mailto:${siteContent.footerLinks.email}`}>
-                <Mail size={16} />
+                <Mail size={18} />
                 {siteContent.footerLinks.email}
               </a>
               <a href="https://wa.me/5511971234401" target="_blank" rel="noreferrer">
@@ -53,9 +54,17 @@ export function Footer({ navigation }: FooterProps) {
                 />
                 {siteContent.footerLinks.whatsapp}
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                <ArrowUpRight size={16} />
-                {siteContent.footerLinks.linkedin}
+              <a
+                href="https://www.instagram.com/figdata?igsh=aGZxb3d5MTF3cmc3&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={styles.footerIcon}
+                  src={instagramLogo}
+                  alt="Instagram"
+                />
+                {siteContent.footerLinks.instagram}
               </a>
             </div>
           </div>
