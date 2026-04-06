@@ -5,10 +5,10 @@ export function WhatsAppButton() {
   return (
     <a
       className={styles.whatsButton}
-      href="https://wa.me/5511943039815?text=Olá, gostaria de saber mais sobre os serviços da FigData Consulting."
+      href="https://wa.me/5511943039815?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira."
       target="_blank"
       rel="noreferrer"
-      aria-label="Falar com a FIgConsulting no WhatsApp"
+      aria-label="Falar com a FigData no WhatsApp"
     >
       <img
         className={styles.whatsButtonIcon}

@@ -2,18 +2,14 @@ import type { LucideIcon } from 'lucide-react'
 import {
   Bot,
   BriefcaseBusiness,
-  ChartColumnIncreasing,
   CircleGauge,
   DatabaseZap,
   Gauge,
   Layers3,
   LayoutDashboard,
-  MessageSquareMore,
-  Radar,
   SearchCheck,
   ShieldCheck,
   Sparkles,
-  Target,
   TrendingUp,
 } from 'lucide-react'
 
@@ -24,6 +20,7 @@ export type NavigationItem = {
 
 export type BadgeItem = {
   label: string
+  logo?: string
 }
 
 export type BenefitItem = {
@@ -44,13 +41,16 @@ export type DifferentiatorItem = {
 }
 
 export type MethodologyStep = {
+  icon: LucideIcon
   title: string
   description: string
 }
 
 export type MetricItem = {
+  icon: LucideIcon
   value: string
   label: string
+  description: string
 }
 
 export type TestimonialItem = {
@@ -79,28 +79,30 @@ export const siteContent = {
     { label: 'Business Intelligence' },
     { label: 'Data Analytics' },
     { label: 'Dashboards' },
-    { label: 'Estratégia orientada por dados' },
+    { label: 'Power BI', logo: 'powerbi' },
+    { label: 'Fabric', logo: 'fabric' },
+    { label: 'Copilot', logo: 'copilot' },
   ] satisfies BadgeItem[],
   benefits: [
     {
       title: 'Clareza para decidir',
       description:
-        'Consolidamos indicadores dispersos em uma leitura executiva simples, acionável e confiável.',
-    },
-    {
-      title: 'Redução de ineficiências',
-      description:
-        'Eliminamos retrabalho analítico e diminuímos o tempo gasto com planilhas e relatórios manuais.',
+        'Unimos indicadores soltos em uma leitura simples para você decidir mais rápido e com menos risco de errar.',
     },
     {
       title: 'Identificação de oportunidades',
       description:
-        'Encontramos padrões de receita, margem e comportamento para revelar novas alavancas de crescimento.',
+        'Revelamos onde sua empresa pode vender mais, ganhar margem e corrigir pontos de desperdício.',
     },
     {
-      title: 'Visão estratégica do negócio',
+      title: 'Visão Estratégica do negócio',
       description:
-        'Traduzimos dados em prioridades gerenciais para acelerar decisões com menos ruído e mais contexto.',
+        'Transformamos números confusos em direcionamento claro para você priorizar o que realmente aumenta resultado.',
+    },
+    {
+      title: 'Redução de ineficiência',
+      description:
+        'Eliminamos retrabalho, planilhas manuais e tempo perdido para sua equipe focar no que gera receita.',
     },
   ] satisfies BenefitItem[],
   services: [
@@ -108,109 +110,121 @@ export const siteContent = {
       icon: SearchCheck,
       title: 'Diagnóstico de dados',
       description:
-        'Mapeamento de fontes, gargalos e maturidade analítica para definir os próximos passos com segurança.',
-    },
-    {
-      icon: LayoutDashboard,
-      title: 'Dashboards e BI',
-      description:
-        'Painéis executivos e operacionais com leitura intuitiva, foco em decisão e acompanhamento contínuo.',
+        'Identificamos gargalos, falhas e oportunidades escondidas nos seus dados para acelerar resultado.',
     },
     {
       icon: CircleGauge,
       title: 'Modelagem de indicadores',
       description:
-        'Definição de KPIs, metas e estruturas de acompanhamento alinhadas aos objetivos da empresa.',
+        'Definimos os indicadores que mostram onde vender mais, proteger margem e agir com velocidade.',
     },
     {
       icon: Bot,
       title: 'Automação de relatórios',
       description:
-        'Rotinas que conectam bases, reduzem tarefas repetitivas e elevam a confiabilidade das entregas.',
+        'Automatizamos relatórios para cortar trabalho manual, reduzir erros e liberar tempo da equipe.',
     },
     {
       icon: TrendingUp,
       title: 'Análise de performance',
       description:
-        'Leitura analítica de vendas, operações, marketing e finanças para orientar ajustes de rota.',
+        'Lemos vendas, operações, marketing e finanças para mostrar onde crescer e o que corrigir primeiro.',
+    },
+    {
+      icon: LayoutDashboard,
+      title: 'Dashboards e BI',
+      description:
+        'Criamos dashboards que mostram em segundos o que está travando ou impulsionando o seu faturamento.',
     },
     {
       icon: DatabaseZap,
       title: 'Cultura data-driven',
       description:
-        'Estruturação de rituais, governança e comunicação para tornar os dados parte do dia a dia da gestão.',
+        'Treinamos seu time para usar dados no dia a dia e transformar informação em execução.',
     },
   ] satisfies ServiceItem[],
   differentiators: [
     {
-      icon: Target,
-      title: 'Abordagem personalizada',
-      description:
-        'Cada projeto nasce do contexto do cliente, sem pacote genérico nem recomendação desconectada da operação.',
-    },
-    {
       icon: BriefcaseBusiness,
       title: 'Foco em resultado de negócio',
       description:
-        'A tecnologia é meio. O objetivo é melhorar margem, produtividade, previsibilidade e velocidade decisória.',
+        'Cada entrega é pensada para aumentar faturamento, proteger margem e reduzir desperdício.',
     },
     {
-      icon: Radar,
-      title: 'Visão analítica e estratégica',
+      icon: Bot,
+      title: 'Tecnologia e Inteligência Artificial',
       description:
-        'Combinamos profundidade técnica com leitura executiva para transformar dado em direcionamento claro.',
+        'Usamos IA, automação e BI para acelerar análises e transformar dados em vantagem competitiva.',
     },
     {
       icon: Layers3,
       title: 'Implantação prática',
       description:
-        'Desenhamos soluções que cabem na rotina da equipe e funcionam além da apresentação final.',
-    },
-    {
-      icon: MessageSquareMore,
-      title: 'Comunicação com gestores',
-      description:
-        'Priorizamos uma narrativa simples, objetiva e útil para acelerar alinhamento entre liderança e operação.',
+        'Seu time recebe uma solução pronta para usar, sem depender de planilhas paralelas.',
     },
     {
       icon: ShieldCheck,
       title: 'Suporte ponta a ponta',
       description:
-        'Acompanhamos do diagnóstico à adoção, garantindo evolução contínua e maior aproveitamento das entregas.',
+        'Acompanhamos da estratégia à adoção para garantir que os dados gerem resultado de verdade.',
     },
   ] satisfies DifferentiatorItem[],
   methodology: [
     {
+      icon: SearchCheck,
       title: 'Diagnóstico',
       description:
-        'Levantamos objetivos, indicadores, bases e principais dores para priorizar o que mais gera impacto.',
+        'Mapeamos onde sua empresa perde dinheiro, tempo e oportunidades.',
     },
     {
+      icon: Layers3,
       title: 'Estruturação',
       description:
-        'Organizamos fontes, regras de negócio, KPIs e arquitetura analítica em um desenho claro e sustentável.',
+        'Organizamos dados e indicadores para criar uma base confiável para crescimento.',
     },
     {
+      icon: Bot,
       title: 'Implementação',
       description:
-        'Construímos dashboards, automações e análises com foco em adoção rápida e valor percebido.',
+        'Colocamos dashboards, automações e análises em produção com foco em ganho rápido.',
     },
     {
+      icon: TrendingUp,
       title: 'Acompanhamento',
       description:
-        'Monitoramos resultados, refinamos indicadores e apoiamos a evolução da maturidade orientada por dados.',
+        'Ajustamos, treinamos e evoluímos a entrega para transformar dados em rotina de resultado.',
     },
   ] satisfies MethodologyStep[],
   metrics: [
-    { value: '+120', label: 'projetos orientados por dados' },
-    { value: '+35%', label: 'ganho médio em visibilidade gerencial' },
-    { value: '+50', label: 'dashboards entregues' },
-    { value: '95%', label: 'satisfação em projetos consultivos' },
+    {
+      icon: Gauge,
+      value: '+9',
+      label: 'anos de experiência em dados',
+      description: 'Histórico construindo leitura executiva e inteligência aplicada ao negócio.',
+    },
+    {
+      icon: Sparkles,
+      value: '+70',
+      label: 'executivos de empresas globais consumindo dados',
+      description: 'Entregas desenhadas para rotinas de gestão que exigem clareza e velocidade.',
+    },
+    {
+      icon: LayoutDashboard,
+      value: '+55',
+      label: 'dashboards entregues',
+      description: 'Painéis executivos e operacionais conectados aos indicadores que importam.',
+    },
+    {
+      icon: ShieldCheck,
+      value: '98%',
+      label: 'satisfação em projetos consultivos',
+      description: 'Relações de parceria sustentadas por entrega prática, próxima e confiável.',
+    },
   ] satisfies MetricItem[],
   testimonials: [
     {
       quote:
-        'A FIgConsulting transformou um cenário fragmentado em uma leitura executiva clara. Hoje conseguimos reagir mais rápido e decidir com muito mais segurança.',
+        'A FigData transformou um cenário fragmentado em uma leitura executiva clara. Hoje conseguimos reagir mais rápido e decidir com muito mais segurança.',
       name: 'Mariana Teles',
       role: 'Diretora de Operações',
       company: 'Nexa Varejo',
@@ -232,19 +246,19 @@ export const siteContent = {
   ] satisfies TestimonialItem[],
   faqs: [
     {
-      question: 'O que faz uma consultoria de analytics?',
+      question: 'O que faz a FigData Consulting?',
       answer:
-        'Ela organiza dados, estrutura indicadores, cria análises e transforma informação em decisões mais rápidas, precisas e alinhadas ao negócio.',
+        'A FigData organiza seus dados, cria dashboards e aplica IA para ajudar sua empresa a vender mais, reduzir desperdícios e decidir com segurança.',
     },
     {
-      question: 'A FIgConsulting atende empresas de quais portes?',
+      question: 'A FigData atende empresas de quais portes?',
       answer:
-        'Atendemos desde operações em fase de estruturação analítica até empresas que já possuem equipes internas e querem acelerar maturidade e execução.',
+        'Atendemos desde empresas pequenas, com pouca estrutura de dados até empresas que já possuem equipes internas e querem acelerar a maturidade dos dados e execução.',
     },
     {
       question: 'Vocês implementam dashboards?',
       answer:
-        'Sim. Desenvolvemos dashboards executivos e operacionais, além de apoiar definição de métricas, arquitetura e adoção pela gestão.',
+        'Sim. Desenvolvemos dashboards em Power BI para que sua empresa acompanhe vendas, margem, equipe e operação em tempo real e aja mais rápido.',
     },
     {
       question: 'Como funciona o diagnóstico inicial?',
@@ -254,42 +268,41 @@ export const siteContent = {
     {
       question: 'Quanto tempo leva um projeto?',
       answer:
-        'O prazo varia conforme escopo, volume de dados e complexidade da operação. Projetos mais enxutos podem gerar entregas iniciais em poucas semanas.',
+        'Depende da necessidade da sua empresa, mas muitos projetos já começam a gerar clareza e ganho percebido em poucos dias.',
     },
     {
       question: 'É possível contratar por escopo?',
       answer:
-        'Sim. Podemos atuar em frentes específicas, como diagnóstico, construção de dashboards, automação ou acompanhamento contínuo.',
+        'Podemos atuar em frentes específicas, como diagnóstico, construção de dashboards, automação ou acompanhamento contínuo. Não é necessário a contratação para o ciclo completo.',
+    },
+    {
+      question: 'Vocês trabalham com Inteligência Artificial?',
+      answer:
+        'Sim, utilizamos Copilot integrado com o Power BI. Sendo possível criar um app exclusivo de visualização para sua empresa com acesso em tempo real no seu celular. Com disparos automáticos e com insights.',
     },
   ] satisfies FaqItem[],
   footerLinks: {
     email: 'contato@figconsulting.com.br',
     whatsapp: '+55 (11) 97123-4401',
-    linkedin: 'linkedin.com/company/figconsulting',
+    instagram: 'instagram.com/figdata',
   },
   heroHighlights: [
-    'Diagnóstico preciso da operação',
-    'KPIs confiáveis para gestão',
-    'Dashboards premium com leitura executiva',
+    'Descubra onde sua empresa perde dinheiro',
+    'Dados confiáveis para decidir rápido',
+    'Dashboards e IA para acelerar resultado',
   ],
   authority: [
     {
       icon: Gauge,
       title: 'Consultoria orientada por dados',
       description:
-        'Diagnóstico técnico, priorização de alavancas e acompanhamento executivo em uma mesma entrega.',
+        'Descobrimos onde estão as maiores alavancas de crescimento e transformamos isso em execução.',
     },
     {
       icon: Sparkles,
-      title: 'Soluções sob medida',
+      title: 'Dados e visuais que geram valor',
       description:
-        'Projetos desenhados para a realidade da empresa, com profundidade analítica e aplicação prática.',
-    },
-    {
-      icon: ChartColumnIncreasing,
-      title: 'Foco em conversão e gestão',
-      description:
-        'Estrutura comercial pensada para fortalecer decisão, visibilidade e geração de valor no negócio.',
+        'Não entregamos dashboards bonitos. Entregamos visibilidade para agir e faturar mais.',
     },
   ],
 }

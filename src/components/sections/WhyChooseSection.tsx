@@ -7,13 +7,8 @@ export function WhyChooseSection() {
       <div className={styles.container}>
         <div className={styles.whyLayout}>
           <div className={styles.whyIntro} data-reveal>
-            <span className={styles.sectionEyebrow}>Por que escolher a FIgConsulting</span>
-            <h2>Autoridade consultiva com execução prática e leitura estratégica</h2>
-            <p>
-              Nosso trabalho combina método, profundidade técnica e linguagem de
-              negócio para que a liderança tenha dados confiáveis, decisões
-              defensáveis e entregas que realmente entram em operação.
-            </p>
+            <span className={styles.sectionEyebrow}>Por que escolher a FigData</span>
+            <h2>A FigData entra para aumentar resultado, não só para entregar dashboard.</h2>
 
             <div className={styles.authorityCards}>
               {siteContent.authority.map((item) => {
