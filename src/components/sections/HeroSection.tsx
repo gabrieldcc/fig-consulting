@@ -68,12 +68,12 @@ export function HeroSection() {
               <span>Consultoria premium em análise de dados, IA e Inteligência de Negócio</span>
             </div>
             <h1>
-              Chega de achismo, aumente seu faturamento analisando dados
-              confiáveis e estratégicos.
+              Chega de achismo. Aumente seu faturamento com dados, IA e
+              informações em tempo real.
             </h1>
             <p className={styles.heroLead}>
-              A FigData transforma dados dispersos em visibilidade
-              gerencial, prioridades claras e evolução real de performance.
+              A FigData transforma dados dispersos em decisões mais rápidas,
+              operações mais lucrativas e crescimento previsível.
             </p>
 
             <div className={styles.heroActions}>

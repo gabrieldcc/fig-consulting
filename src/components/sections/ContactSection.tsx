@@ -11,10 +11,10 @@ export function ContactSection() {
         <div className={styles.contactLayout}>
           <div className={styles.contactCopy} data-reveal>
             <span className={styles.sectionEyebrow}>Próximo passo</span>
-            <h2>Solicite um diagnóstico estratégico</h2>
+            <h2>Descubra como faturar mais com a FigData</h2>
             <p>
-              Converse com a FigData para entender prioridades analíticas,
-              oportunidades de ganho e o melhor formato para iniciar seu projeto.
+              Converse com a FigData e descubra onde estão os gargalos,
+              desperdícios e oportunidades de crescimento do seu negócio.
             </p>
 
             <div className={styles.contactPoints}>
@@ -29,7 +29,7 @@ export function ContactSection() {
             </div>
 
             <a className={styles.primaryButton} href={whatsappUrl} target="_blank" rel="noreferrer">
-              Entrar em contato
+              Quero faturar mais
               <ArrowRight size={18} />
             </a>
           </div>
@@ -99,11 +99,11 @@ export function ContactSection() {
                 id="scope"
                 name="scope"
                 rows={5}
-                placeholder="Conte brevemente sua realidade"
+                placeholder="Conte brevemente onde sua empresa quer crescer ou o que hoje está travando seus resultados"
               />
             </div>
             <button className={styles.primaryButton} type="submit">
-              Solicitar diagnóstico para faturar mais
+              Quero um diagnóstico para faturar mais
               <ArrowRight size={18} />
             </button>
           </form>

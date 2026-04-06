@@ -8,7 +8,7 @@ export function WhyChooseSection() {
         <div className={styles.whyLayout}>
           <div className={styles.whyIntro} data-reveal>
             <span className={styles.sectionEyebrow}>Por que escolher a FigData</span>
-            <h2>Entregamos dados e visuais que vão gerar valor e revolucionar seu negócio.</h2>
+            <h2>A FigData entra para aumentar resultado, não só para entregar dashboard.</h2>
 
             <div className={styles.authorityCards}>
               {siteContent.authority.map((item) => {
