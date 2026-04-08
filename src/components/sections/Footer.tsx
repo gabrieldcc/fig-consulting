@@ -46,7 +46,7 @@ export function Footer({ navigation }: FooterProps) {
                 <Mail size={18} />
                 {siteContent.footerLinks.email}
               </a>
-              <a href="https://wa.me/5511971234401" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/5511914966135" target="_blank" rel="noreferrer">
                 <img
                   className={styles.footerIcon}
                   src={whatsappLogo}

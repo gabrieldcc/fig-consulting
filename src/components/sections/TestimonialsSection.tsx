@@ -27,7 +27,9 @@ export function TestimonialsSection() {
               <div>
                 <strong>{testimonial.name}</strong>
                 <span>
-                  {testimonial.role} • {testimonial.company}
+                  {testimonial.company
+                    ? `${testimonial.role} • ${testimonial.company}`
+                    : testimonial.role}
                 </span>
               </div>
             </article>

@@ -2,7 +2,31 @@ import { ArrowRight, Mail, Phone } from 'lucide-react'
 import styles from '../../styles/landing.module.css'
 
 const whatsappUrl =
-  'https://wa.me/5511943039815?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira.'
+  'https://wa.me/5511914966135?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira.'
+
+function formatPhone(value: string) {
+  const digits = value.replace(/\D/g, '').slice(0, 11)
+
+  if (digits.length <= 2) return digits ? `(${digits}` : ''
+  if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`
+
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`
+}
+
+function formatPhoneFromDigits(digits: string) {
+  const normalizedDigits = digits.slice(0, 11)
+
+  if (normalizedDigits.length <= 2) return normalizedDigits ? `(${normalizedDigits}` : ''
+  if (normalizedDigits.length <= 7) {
+    return `(${normalizedDigits.slice(0, 2)}) ${normalizedDigits.slice(2)}`
+  }
+
+  return `(${normalizedDigits.slice(0, 2)}) ${normalizedDigits.slice(2, 7)}-${normalizedDigits.slice(7)}`
+}
+
+function normalizeEmail(value: string) {
+  return value.replace(/\s+/g, '').toLowerCase()
+}
 
 export function ContactSection() {
   return (
@@ -20,11 +44,11 @@ export function ContactSection() {
             <div className={styles.contactPoints}>
               <div>
                 <Mail size={18} />
-                <span>contato@figconsulting.com.br</span>
+                <span>figdata.contato@gmail.com</span>
               </div>
               <div>
                 <Phone size={18} />
-                <span>+55 (11) 97123-4401</span>
+                <span>+55 (11) 91496-6135</span>
               </div>
             </div>
 
@@ -56,7 +80,7 @@ export function ContactSection() {
                 `Realidade do negócio: ${scope || 'Não informado'}`,
               ].join('\n')
 
-              const targetUrl = `https://wa.me/5511943039815?text=${encodeURIComponent(message)}`
+              const targetUrl = `https://wa.me/5511914966135?text=${encodeURIComponent(message)}`
               window.open(targetUrl, '_blank', 'noopener,noreferrer')
             }}
           >
@@ -71,6 +95,10 @@ export function ContactSection() {
                 name="email"
                 type="email"
                 placeholder="voce@empresa.com"
+                inputMode="email"
+                onBlur={(event) => {
+                  event.currentTarget.value = normalizeEmail(event.currentTarget.value)
+                }}
               />
             </div>
             <div className={styles.formRow}>
@@ -80,7 +108,39 @@ export function ContactSection() {
                 name="phone"
                 type="tel"
                 placeholder="(11) 99999-9999"
+                inputMode="numeric"
+                pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
                 required
+                onInput={(event) => {
+                  const input = event.currentTarget
+                  const cursorPosition = input.selectionStart ?? input.value.length
+                  const digitsBeforeCursor = input.value
+                    .slice(0, cursorPosition)
+                    .replace(/\D/g, '').length
+                  const formattedValue = formatPhone(input.value)
+
+                  input.value = formattedValue
+
+                  let nextCursorPosition = formattedValue.length
+                  for (let index = 0, digitsCount = 0; index < formattedValue.length; index += 1) {
+                    if (/\d/.test(formattedValue[index])) {
+                      digitsCount += 1
+                    }
+
+                    if (digitsCount >= digitsBeforeCursor) {
+                      nextCursorPosition = index + 1
+                      break
+                    }
+                  }
+
+                  requestAnimationFrame(() => {
+                    input.setSelectionRange(nextCursorPosition, nextCursorPosition)
+                  })
+                }}
+                onBlur={(event) => {
+                  const input = event.currentTarget
+                  input.value = formatPhoneFromDigits(input.value.replace(/\D/g, ''))
+                }}
               />
             </div>
             <div className={styles.formRow}>

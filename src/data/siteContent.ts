@@ -216,7 +216,7 @@ export const siteContent = {
     },
     {
       icon: ShieldCheck,
-      value: '98%',
+      value: '99,8%',
       label: 'satisfação em projetos consultivos',
       description: 'Relações de parceria sustentadas por entrega prática, próxima e confiável.',
     },
@@ -224,24 +224,24 @@ export const siteContent = {
   testimonials: [
     {
       quote:
-        'A FigData transformou um cenário fragmentado em uma leitura executiva clara. Hoje conseguimos reagir mais rápido e decidir com muito mais segurança.',
-      name: 'Mariana Teles',
-      role: 'Diretora de Operações',
-      company: 'Nexa Varejo',
+        'As entregas elevaram o nível de análise do time, tornando o ambiente data-driven. Passamos a acompanhar Market Share, vendas por canal e performance regional de forma prática e disponível pra consulta a qualquer momento, tudo consolidado em dashboards claros e confiáveis. Isso trouxe visão estratégica e profunda pra diretoria de vendas, facilitando ajustes de rota e decisões críticas.',
+      name: 'Rafael Rahhal',
+      role: 'Head Executivo de Vendas',
+      company: '',
     },
     {
       quote:
-        'Os dashboards trouxeram visibilidade real para a gestão comercial. Reduzimos tempo de consolidação e ganhamos consistência nas reuniões de performance.',
-      name: 'Renato Azevedo',
-      role: 'Head Comercial',
-      company: 'Atlas Industrial',
+        'Os dashboards entregues trouxeram um novo nível de controle para nossa operação. Passamos a acompanhar a produção, estoque e giro em tempo real, com informações confiáveis e de fácil leitura, o que aumentou a eficiência da central de produção no Rio de Janeiro. As análises facilitaram decisões rápidas e reduziram riscos operacionais.',
+      name: 'Adriana Monteiro',
+      role: 'Gerente de Operações',
+      company: '',
     },
     {
       quote:
-        'O diferencial foi unir profundidade analítica com uma implementação prática. A equipe internalizou os indicadores e a operação ficou muito mais previsível.',
-      name: 'Luciana Prado',
-      role: 'CFO',
-      company: 'Verda Saúde Integrada',
+        'Os dashboards em Power BI mudaram completamente a rotina no campo. Hoje conseguimos consultar resultados de vendas, metas e performance das lojas direto do celular, em tempo real, durante visitas à rede. Isso trouxe mais agilidade e segurança para tomar decisões rápidas com os gerentes. Os painéis entregues são extremamente rápidos, intuitivos e alinhados com a realidade comercial.',
+      name: 'Leonidas Schimidt',
+      role: 'Business Management',
+      company: '',
     },
   ] satisfies TestimonialItem[],
   faqs: [
@@ -282,8 +282,8 @@ export const siteContent = {
     },
   ] satisfies FaqItem[],
   footerLinks: {
-    email: 'contato@figconsulting.com.br',
-    whatsapp: '+55 (11) 97123-4401',
+    email: 'figdata.contato@gmail.com',
+    whatsapp: '+55 (11) 91496-6135',
     instagram: 'instagram.com/figdata',
   },
   heroHighlights: [

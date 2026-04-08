@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, BarChart3, CheckCircle2, Play, ShieldCheck } from 'lucide-react'
+import { ArrowRight, BarChart3, CheckCircle2, ShieldCheck } from 'lucide-react'
 import copilotLogo from '../../assets/Copilot-Logo.png'
 import fabricLogo from '../../assets/fabric-logo.png'
 import powerBiLogo from '../../assets/Power-BI-Logo.png'
@@ -7,7 +7,7 @@ import { siteContent } from '../../data/siteContent'
 import styles from '../../styles/landing.module.css'
 
 const whatsappUrl =
-  'https://wa.me/5511943039815?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira.'
+  'https://wa.me/5511914966135?text=Olá, gostaria de saber como faturar mais usando a FigData como parceira.'
 
 function BadgeLogo({ logo }: { logo: string }) {
   if (logo === 'powerbi') {
@@ -81,10 +81,6 @@ export function HeroSection() {
                 Falar com um especialista
                 <ArrowRight size={18} />
               </a>
-              <a className={styles.secondaryButton} href={whatsappUrl} target="_blank" rel="noreferrer">
-                <Play size={16} />
-                Ver soluções
-              </a>
             </div>
 
             <div className={styles.badgeList} aria-label="Especialidades">
@@ -131,7 +127,7 @@ export function HeroSection() {
                     <span>dashboards entregues</span>
                   </div>
                   <div>
-                    <strong>98%</strong>
+                    <strong>99,8%</strong>
                     <span>satisfação consultiva</span>
                   </div>
                 </div>
