@@ -225,21 +225,21 @@ export const siteContent = {
     {
       quote:
         'As entregas elevaram o nível de análise do time, tornando o ambiente data-driven. Passamos a acompanhar Market Share, vendas por canal e performance regional de forma prática e disponível pra consulta a qualquer momento, tudo consolidado em dashboards claros e confiáveis. Isso trouxe visão estratégica e profunda pra diretoria de vendas, facilitando ajustes de rota e decisões críticas.',
-      name: 'Rafael Rahhal',
+      name: 'Shirley Correa',
       role: 'Head Executivo de Vendas',
       company: '',
     },
     {
       quote:
         'Os dashboards entregues trouxeram um novo nível de controle para nossa operação. Passamos a acompanhar a produção, estoque e giro em tempo real, com informações confiáveis e de fácil leitura, o que aumentou a eficiência da central de produção no Rio de Janeiro. As análises facilitaram decisões rápidas e reduziram riscos operacionais.',
-      name: 'Adriana Monteiro',
+      name: 'Leonardo Serrado',
       role: 'Gerente de Operações',
       company: '',
     },
     {
       quote:
         'Os dashboards em Power BI mudaram completamente a rotina no campo. Hoje conseguimos consultar resultados de vendas, metas e performance das lojas direto do celular, em tempo real, durante visitas à rede. Isso trouxe mais agilidade e segurança para tomar decisões rápidas com os gerentes. Os painéis entregues são extremamente rápidos, intuitivos e alinhados com a realidade comercial.',
-      name: 'Leonidas Schimidt',
+      name: 'Luiz Henrique Dias',
       role: 'Business Management',
       company: '',
     },
